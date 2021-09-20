@@ -7,7 +7,7 @@ let booksDirectory = books;
 router.post('/login', (req, res) => {
     let sess = req.session;
     sess.email = req.body.email;
-    res.send(sess.email);
+    res.send("Logged in successfully");
     });
 
 
@@ -123,7 +123,7 @@ router.get('/logout', (req, res) => {
     if (err) {
     return console.log(err);
     }
-    res.send('logged out');
+    res.send('logged out successfully.');
     });
     });
 
